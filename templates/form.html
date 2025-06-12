@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Registro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex justify-center items-center h-screen">
+    <form action="/enviar" method="POST" class="bg-white p-8 rounded-lg shadow-md w-full max-w-xl">
+        <h2 class="text-3xl font-bold mb-6 text-center">Formulario de Registro Completo</h2>
+
+        <!-- Nombre -->
+        <label class="block mb-4">
+            <span class="text-gray-700">Nombre Completo</span>
+            <input name="nombre" type="text" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" placeholder="Ingresa tu nombre completo" />
+        </label>
+
+        <!-- Correo Electrónico -->
+        <label class="block mb-4">
+            <span class="text-gray-700">Correo Electrónico</span>
+            <input name="correo" type="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" placeholder="ejemplo@dominio.com" />
+        </label>
+
+        <!-- Teléfono -->
+        <label class="block mb-4">
+            <span class="text-gray-700">Teléfono</span>
+            <input name="telefono" type="text" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" placeholder="Número de teléfono" />
+        </label>
+
+        <!-- Dirección -->
+        <label class="block mb-4">
+            <span class="text-gray-700">Dirección</span>
+            <input name="direccion" type="text" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" placeholder="Ingresa tu dirección" />
+        </label>
+
+        <!-- Fecha de Nacimiento -->
+        <label class="block mb-4">
+            <span class="text-gray-700">Fecha de Nacimiento</span>
+            <input name="fecha_nacimiento" type="date" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" />
+        </label>
+
+        <!-- Género -->
+        <label class="block mb-4">
+            <span class="text-gray-700">Género</span>
+            <select name="genero" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+            </select>
+        </label>
+
+        <!-- Aceptación de Términos -->
+        <label class="flex items-center mb-4">
+            <input type="checkbox" name="terminos" required class="form-checkbox h-5 w-5 text-indigo-600" />
+            <span class="ml-2 text-gray-700">Acepto los <a href="#" class="text-indigo-600">términos y condiciones</a></span>
+        </label>
+
+        <!-- Botón de Enviar -->
+        <button type="submit" class="w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700">Enviar</button>
+    </form>
+</body>
+</html>
